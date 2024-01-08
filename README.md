@@ -6,7 +6,7 @@ It schedules jobs using a REST API and cron expressions.
 Jobs just print messages to the console.
 Use REST calls to create, update, delete jobs.  
 
-Jobs are persisted Postgres and after a restart, the scheduler will continue existing job execution.  
+Jobs are persisted to Postgres DB. After a restart, the scheduler will continue existing job's execution.  
 
 If you plan to use code from this project in production, be exremely careful as the failure handling and transaction managment needs improvement.  
 
