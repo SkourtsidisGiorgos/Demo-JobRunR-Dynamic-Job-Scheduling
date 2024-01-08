@@ -28,6 +28,9 @@ If you plan to use code from this project in production, be exremely careful as 
 ## Usage
 
 - Using Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+![Screenshot from 2024-01-08 15-18-46](https://github.com/SkourtsidisGiorgos/Demo-JobRunR-Dynamic-Job-Scheduling/assets/60469956/c2fcf50c-884e-455a-b017-de694f2f4362)
+
+
 - Using curl:
 
 **Get all jobs**
@@ -73,8 +76,13 @@ curl -X 'DELETE' 'http://localhost:8080/jobs/delete-by-name/job1-new'
 ```shell
 less logs/dynamic-job-scheduling.log
 ```
+![Screenshot from 2024-01-08 15-25-18](https://github.com/SkourtsidisGiorgos/Demo-JobRunR-Dynamic-Job-Scheduling/assets/60469956/aaeaa959-8460-4ab0-9fe5-1ecb612467ac)
+
+
 
 - Visit Web UI: `http://localhost:8000/dashboard/recurring-jobs`
+![Screenshot from 2024-01-08 15-23-29](https://github.com/SkourtsidisGiorgos/Demo-JobRunR-Dynamic-Job-Scheduling/assets/60469956/5edd12d4-5016-4aa9-abb7-74a69b7e48d5)
+
 
 
 
