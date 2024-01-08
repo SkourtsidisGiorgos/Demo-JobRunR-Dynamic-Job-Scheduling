@@ -3,10 +3,9 @@
 This is a demo project to showcase dynamic job scheduling using [JobRunR](https://www.jobrunr.io/en/).
 
 It schedules jobs using a REST API and cron expressions.  
-Jobs just print messages to the console. Messages are defined by the user.  
+Jobs just print messages to the console.
 Use REST calls to create, update, delete jobs.  
 Don't use code from this project in production as is, as the failure handling and transaction managment is not perfect.  
-
 
 Jobs are persisted Postgres and after a restart, the scheduler will continue existing job execution.  
 
