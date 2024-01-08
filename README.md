@@ -2,19 +2,19 @@
 
 This is a demo project to showcase dynamic job scheduling using [JobRunR](https://www.jobrunr.io/en/).
 
-It schedules jobs using a REST API and cron expressions. 
-Jobs just print messages to the console. Messages are defined by the user.
-Use REST calls to create, update, delete jobs. 
-Don't use code from this project in production as is, as the failure handling and transaction managment is not perfect.
+It schedules jobs using a REST API and cron expressions.  
+Jobs just print messages to the console. Messages are defined by the user.  
+Use REST calls to create, update, delete jobs.  
+Don't use code from this project in production as is, as the failure handling and transaction managment is not perfect.  
 
 
-Jobs are persisted Postgres and after a restart, the scheduler will continue existing job execution.
+Jobs are persisted Postgres and after a restart, the scheduler will continue existing job execution.  
 
 ## Pre-requisites
 
-- Java 21
-- Docker
-- Docker Compose
+- Java 21  
+- Docker  
+- Docker Compose  
 
 ## Run
 
@@ -69,12 +69,12 @@ curl -X 'DELETE' 'http://localhost:8080/jobs/delete-by-name/job1-new'
 ```
 
 
-- See the logs to see the job execution
+- See logs to inspect job execution:
 ```shell
 less logs/dynamic-job-scheduling.log
 ```
 
-- Visit Web UI to see the job execution `http://localhost:8000/dashboard/recurring-jobs`
+- Visit Web UI: `http://localhost:8000/dashboard/recurring-jobs`
 
 
 
