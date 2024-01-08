@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: on
+    show-sql: true
+
+org:
+  jobrunr:
+    dashboard:
+      enabled: true
+      port: 8000
+    background-job-server:
+      enabled: true
+      poll-interval-in-seconds: 5
