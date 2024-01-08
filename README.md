@@ -13,8 +13,8 @@ If you plan to use code from this project in production, be exremely careful as 
 ## Pre-requisites
 
 - Java 21  
-- Docker  
-- Docker Compose  
+- Docker v20.03.0+
+- Docker Compose v2.0.0+
 
 ## Run
 
