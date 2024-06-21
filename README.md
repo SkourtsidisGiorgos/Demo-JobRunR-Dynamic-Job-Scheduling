@@ -2,19 +2,19 @@
 
 This is a demo project to showcase dynamic job scheduling using [JobRunR](https://www.jobrunr.io/en/).
 
-It schedules jobs using a REST API and cron expressions. 
-Jobs just print messages to the console. Messages are defined by the user.
-Use REST calls to create, update, delete jobs. 
-Don't use code from this project in production as is, as the failure handling and transaction managment is not perfect.
+It schedules jobs using a REST API and cron expressions.  
+Jobs just print messages to the console.
+Use REST calls to create, update, delete jobs.  
 
+Jobs are persisted to Postgres DB. After a restart, the scheduler will continue existing job's execution.  
 
-Jobs are persisted Postgres and after a restart, the scheduler will continue existing job execution.
+If you plan to use code from this project in production, be exremely careful as the failure handling and transaction managment needs improvement.  
 
 ## Pre-requisites
 
-- Java 21
-- Docker
-- Docker Compose
+- Java 21  
+- Docker v20.03.0+
+- Docker Compose v2.0.0+
 
 ## Run
 
@@ -28,6 +28,9 @@ Jobs are persisted Postgres and after a restart, the scheduler will continue exi
 ## Usage
 
 - Using Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+![Screenshot from 2024-01-08 15-18-46](https://github.com/SkourtsidisGiorgos/Demo-JobRunR-Dynamic-Job-Scheduling/assets/60469956/c2fcf50c-884e-455a-b017-de694f2f4362)
+
+
 - Using curl:
 
 **Get all jobs**
@@ -69,12 +72,17 @@ curl -X 'DELETE' 'http://localhost:8080/jobs/delete-by-name/job1-new'
 ```
 
 
-- See the logs to see the job execution
+- See logs to inspect job execution:
 ```shell
 less logs/dynamic-job-scheduling.log
 ```
+![Screenshot from 2024-01-08 15-25-18](https://github.com/SkourtsidisGiorgos/Demo-JobRunR-Dynamic-Job-Scheduling/assets/60469956/aaeaa959-8460-4ab0-9fe5-1ecb612467ac)
 
-- Visit Web UI to see the job execution `http://localhost:8000/dashboard/recurring-jobs`
+
+
+- Visit Web UI: `http://localhost:8000/dashboard/recurring-jobs`
+![Screenshot from 2024-01-08 15-23-29](https://github.com/SkourtsidisGiorgos/Demo-JobRunR-Dynamic-Job-Scheduling/assets/60469956/5edd12d4-5016-4aa9-abb7-74a69b7e48d5)
+
 
 
 
