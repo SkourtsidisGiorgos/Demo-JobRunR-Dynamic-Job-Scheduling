@@ -122,13 +122,9 @@ public class JobService {
         return jobEntity;
     }
 
-    // Revert changes if anything goes wrong
     private void revertChanges(JobEntity backupEntity, String originalScheduledId) {
         try {
-            // Revert job details in the repository
             jobRepository.save(backupEntity);
-
-            // Revert changes in the scheduler, if necessary
             jobScheduler.delete(backupEntity.getScheduledId());
             jobScheduler.createRecurrently(aRecurringJob()
                     .withCron(backupEntity.getCronExpression())

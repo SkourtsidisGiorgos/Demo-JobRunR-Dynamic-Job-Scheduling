@@ -24,6 +24,4 @@ public class ApiExceptionHandler {
         LOG.error("An error occurred: {}", ex.getMessage(), ex);
         return new ResponseEntity<>("An error occurred: " + ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
-    // You can add more specific exception handlers below
 }
